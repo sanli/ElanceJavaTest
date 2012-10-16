@@ -25,7 +25,7 @@ public class Main5 {
 			Pattern p = Pattern.compile("[A-Z]\\S*\\b");
 			Matcher m = p.matcher(str);
 			while(m.find()){
-				System.out.println("i:" + m.group());
+				System.out.println(m.group());
 			}
 		}
 	}
