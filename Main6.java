@@ -8,13 +8,9 @@ import java.util.Locale;
 
 public class Main6 {
 
-	/**
-	 * @param args
-	 * @throws IOException 
-	 */
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader( new InputStreamReader(System.in));
-		ArrayList<String> strings = new ArrayList<String>(4);
+		ArrayList<String> strings = new ArrayList<String>(2);
 		
 		for(int i = 0 ; i< 2 ;i++){
 			String s = br.readLine();
@@ -33,7 +29,6 @@ public class Main6 {
 			String x = ca.getDisplayName(Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.US ) ;
 			System.out.println(x.toUpperCase());
 		}
-
 	}
 
 }

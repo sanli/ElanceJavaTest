@@ -8,15 +8,11 @@ import java.util.regex.Pattern;
 
 public class Main5 {
 
-	/**
-	 * @param args
-	 * @throws IOException 
-	 */
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader( new InputStreamReader(System.in));
-		ArrayList<String> strings = new ArrayList<String>(4);
+		ArrayList<String> strings = new ArrayList<String>(3);
 		
-		for(int i = 0 ; i< 2 ;i++){
+		for(int i = 0 ; i< 3 ;i++){
 			String s = br.readLine();
 			strings.add(s);
 		}

@@ -6,10 +6,6 @@ import java.util.ArrayList;
 
 public class Main8 {
 
-	/**
-	 * @param args
-	 * @throws IOException 
-	 */
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader( new InputStreamReader(System.in));
 		ArrayList<String> strings = new ArrayList<String>(4);

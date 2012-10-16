@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map.Entry;
 
 public class Main2 {
@@ -35,7 +34,7 @@ public class Main2 {
 			}
 		}
 		
-		ArrayList<Entry<String,Integer>> list = new ArrayList(score.entrySet()) ;
+		ArrayList<Entry<String,Integer>> list = new ArrayList<Entry<String,Integer>>(score.entrySet()) ;
 		Collections.sort(list, new Comparator< Entry<String,Integer> >(){
 
 			@Override
