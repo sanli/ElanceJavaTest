@@ -2,7 +2,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
 
 
@@ -18,12 +17,12 @@ public class Main9 {
 		}
 		
 		String[] c1 = strings.get(0).split(",");
-		String[] c2 = strings.get(1).split(",");
+		HashSet<String> set1 = new HashSet<String>(c1.length * 2);
+		for(String s : c1) set1.add(s);
 		
-		HashSet<String> set1 = new HashSet<String>(Arrays.asList(c1));
-		HashSet<String> set2 = new HashSet<String>(Arrays.asList(c2));
+		String[] c2 = strings.get(1).split(",");
 		int count = 0 ;
-		for(String s : set2){
+		for(String s : c2){
 			if(set1.contains(s))
 				count ++ ;
 		}

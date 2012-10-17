@@ -1,7 +1,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 
 
 public class Main1 {
@@ -12,19 +11,18 @@ public class Main1 {
 	 */
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader( new InputStreamReader(System.in));
-		ArrayList<String> names = new ArrayList<String>(4);
+		int[] names = new int[2];
 		
 		for(int i = 0 ; i< 2 ;i++){
-			String s = br.readLine();
-			names.add(s);
+			names[i] = Integer.parseInt(br.readLine());
 		}
 		
-		System.out.println(getDist(Integer.parseInt(names.get(0)))); 
-		System.out.println(getDist(Integer.parseInt(names.get(1))));
+		System.out.println(getDist(names[0])); 
+		System.out.println(getDist(names[1]));
 	}
 
+	public static int CO = 10 ; // (36 * 1000) / 3600 ;
 	private static int getDist(int v1) {
-		return (36 * 1000) / 3600 * v1  + 5 * v1 * v1 / 2 ;
+		return CO * v1  + 5 * v1 * v1 / 2 ;
 	}
-	
 }
