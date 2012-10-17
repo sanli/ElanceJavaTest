@@ -2,8 +2,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.List;
-
 
 public class Main7 {
 
@@ -18,34 +16,22 @@ public class Main7 {
 		
 		for(String num : strings){
 			int x = Integer.parseInt(num);
-			List<StringBuilder> msg = getMessage(x);
-			for(StringBuilder s : msg){
-				System.out.println(s.toString());
+			for(int i = 1; i<= x; i++){
+				StringBuilder sb = new StringBuilder();
+				for(int j = 0; j< x - i ; j++){
+					sb.append(" ");
+				}
+				printLine(i,sb);
+				System.out.println(sb.toString());
 			}
 		}
 	}
 
-	private static List<StringBuilder> getMessage(int x) {
-		ArrayList<StringBuilder> res = new ArrayList<StringBuilder>(x);
-		
-		if(x > 1){
-			List<StringBuilder> sub = getMessage(x - 1);
-			for(StringBuilder s : sub){
-				s.insert(0, " ");
-			}
-			
-			StringBuilder sb = new StringBuilder();
-			for(int i = 1; i< x  ; i++)
-				sb.append(x).append(" ");
-			sb.append(x);
-			
-			res.addAll(sub);
-			res.add(sb);
-			return res ;
-		}else{
-			res.add(new StringBuilder(Integer.toString(x)));
-			return res ;
+	private static void printLine(int line, StringBuilder sb) {
+		for(int i = 1 ; i< line ; i++){
+			sb.append(line).append(" ");
 		}
+		sb.append(line);
 	}
 
 }

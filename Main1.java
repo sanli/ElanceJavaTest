@@ -19,17 +19,12 @@ public class Main1 {
 			names.add(s);
 		}
 		
-		int v1 = Integer.parseInt(names.get(0));
-		int v2 = Integer.parseInt(names.get(1));
-		
-		
-		System.out.println(getDist(v1)); 
-		System.out.println(getDist(v2));
+		System.out.println(getDist(Integer.parseInt(names.get(0)))); 
+		System.out.println(getDist(Integer.parseInt(names.get(1))));
 	}
 
 	private static int getDist(int v1) {
 		return (36 * 1000) / 3600 * v1  + 5 * v1 * v1 / 2 ;
 	}
-
 	
 }

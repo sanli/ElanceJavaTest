@@ -15,10 +15,7 @@ public class Main3 {
 		String s = br.readLine();
 		String[] sarr = s.split(",");
 		
-		int sum1 = getSumOfString(sarr[0]);
-		int sum2 = getSumOfString(sarr[1]);
-		
-		System.out.println(sum1 - sum2);
+		System.out.println(getSumOfString(sarr[0]) - getSumOfString(sarr[1]));
 	}
 
 	private static int getSumOfString(String string) {
